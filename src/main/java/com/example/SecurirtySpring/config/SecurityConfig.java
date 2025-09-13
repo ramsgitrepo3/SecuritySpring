@@ -26,7 +26,7 @@ public class SecurityConfig {
         this.customUserDetailsService = customUserDetailsService;
     }
 
-    // ✅ Password encoder
+    //  Password encoder
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -39,7 +39,7 @@ public class SecurityConfig {
     //}
     
 
-    // ✅ DaoAuthenticationProvider with our CustomUserDetailsService
+    //  DaoAuthenticationProvider with our CustomUserDetailsService
    /* @Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
@@ -48,7 +48,7 @@ public class SecurityConfig {
         return provider;
     }*/
 
-    // ✅ AuthenticationManager bean (delegates to AuthenticationProvider)
+    //  AuthenticationManager bean (delegates to AuthenticationProvider)
     
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationProvider authenticationProvider) {

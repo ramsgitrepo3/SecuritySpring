@@ -17,6 +17,16 @@ public class Role {
 
     @ManyToMany(mappedBy = "roles")
     private Set<AppUser> users;
+    
+    
+    
+    public Role() {}
+
+    //  Constructor for quick creation
+    public Role(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     // getters & setters
     public Long getId() {
